@@ -1,0 +1,1 @@
+{"keywords":["stripe","oauth","popup"],"main":"./lib.umd.js","module":"./lib.es.js","typings":"./src/index","exports":{".":{"import":"./lib.es.js","require":"./lib.umd.js"}},"name":"stripe-oauth","version":"0.0.1","author":{"name":"Fahadul Islam","email":"dev.iamfahad@gmail.com","url":"https://github.com/dapotatoman"}}
