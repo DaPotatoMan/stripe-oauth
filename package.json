@@ -1,0 +1,28 @@
+{
+   "name": "stripe-oauth",
+   "version": "0.0.0",
+   "author": {
+      "name": "Fahadul Islam",
+      "email": "dev.iamfahad@gmail.com",
+      "url": "https://github.com/dapotatoman"
+   },
+   "repository": {
+      "url": "https://github.com/dapotatoman/stripe-oauth"
+   },
+   "scripts": {
+      "dev": "vite",
+      "pkg": "tsc && vite build && node ./build/build.ts"
+   },
+   "devDependencies": {
+      "fs-extra": "^10.0.0",
+      "typescript": "^4.3.2",
+      "vite": "^2.6.4",
+      "vite-plugin-dts": "^0.8.3"
+   },
+   "optionalDependencies": {
+      "@types/node": "^16.10.9"
+   },
+   "dependencies": {
+      "nanoid": "^3.1.30"
+   }
+}

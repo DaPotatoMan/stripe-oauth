@@ -1,0 +1,16 @@
+{
+   "keywords": [
+      "stripe",
+      "oauth",
+      "popup"
+   ],
+   "main": "./lib.umd.js",
+   "module": "./lib.es.js",
+   "typings": "./src/index",
+   "exports": {
+      ".": {
+         "import": "./lib.es.js",
+         "require": "./lib.umd.js"
+      }
+   }
+}
