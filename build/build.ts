@@ -18,7 +18,7 @@ async function handlePackageJSON() {
       pkg[key] = origPackage[key];
    });
 
-   await writeFile('./dist/package.json', JSON.stringify(pkg));
+   await writeFile('./dist/package/package.json', JSON.stringify(pkg));
 }
 
 async function init() {

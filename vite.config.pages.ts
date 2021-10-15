@@ -14,6 +14,6 @@ export default defineConfig({
    plugins: [WindiCSS()],
 
    build: {
-      outDir: resolve(__dirname, 'dist-render')
+      outDir: resolve(__dirname, 'dist/gh-pages')
    }
 });

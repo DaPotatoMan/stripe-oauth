@@ -6,6 +6,8 @@ export default defineConfig({
    plugins: [Types()],
 
    build: {
+      outDir: resolve(__dirname, 'dist/package'),
+
       lib: {
          name: 'StripeOAuth',
          fileName: 'lib',
