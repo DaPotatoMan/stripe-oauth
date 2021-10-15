@@ -11,9 +11,8 @@
    },
    "scripts": {
       "dev": "vite",
-      "pkg": "tsc && vite build && node ./build/build.ts",
-      "pkg:pages": "tsc && vite build -c vite.config.pages.ts",
-      "build": "yarn pkg && yarn pkg:pages"
+      "build": "tsc && vite build -c vite.config.pages.ts",
+      "pkg": "tsc && vite build && node ./build/build.ts"
    },
    "devDependencies": {
       "fs-extra": "^10.0.0",
