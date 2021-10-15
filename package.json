@@ -11,13 +11,16 @@
    },
    "scripts": {
       "dev": "vite",
-      "pkg": "tsc && vite build && node ./build/build.ts"
+      "pkg": "tsc && vite build && node ./build/build.ts",
+      "pkg:pages": "tsc && vite build -c vite.config.pages.ts"
    },
    "devDependencies": {
       "fs-extra": "^10.0.0",
       "typescript": "^4.3.2",
       "vite": "^2.6.4",
-      "vite-plugin-dts": "^0.8.3"
+      "vite-plugin-dts": "^0.8.3",
+      "vite-plugin-windicss": "^1.4.11",
+      "windicss": "^3.1.9"
    },
    "optionalDependencies": {
       "@types/node": "^16.10.9"

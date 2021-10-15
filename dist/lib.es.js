@@ -64,16 +64,6 @@ function createAuthParams(params) {
     url: url.toString()
   };
 }
-function resolveOAuthParams() {
-  const params = new URLSearchParams(window.location.search);
-  const data = {
-    hash: params.get("state"),
-    code: params.get("code")
-  };
-  if (window.opener) {
-    window.opener.postMessage(data, { targetOrigin: "*" });
-  }
-}
 function onWindowClosed(target, callback) {
   const timer = setInterval(() => {
     if (target.closed) {
@@ -104,4 +94,4 @@ function getOAuthCode(params) {
     window.addEventListener("message", onAuthorized);
   });
 }
-export { getOAuthCode, resolveOAuthParams };
+export { getOAuthCode };

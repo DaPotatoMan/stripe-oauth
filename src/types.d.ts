@@ -1,5 +1,3 @@
-/// <reference types="vite/client" />
-
 export interface IStripeParams extends Record<string, string> {
    client_id: string;
    response_type: string;

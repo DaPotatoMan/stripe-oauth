@@ -1,6 +1,5 @@
 import { IPopupParams } from './types';
 import { createAuthParams, getPopupParams } from './utils';
-export { resolveOAuthParams } from './utils';
 
 function onWindowClosed(target: Window, callback: VoidFunction) {
    const timer = setInterval(() => {
