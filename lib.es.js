@@ -82,14 +82,14 @@ function getOAuthCode(params) {
     function onAuthorized(event) {
       var _a2, _b;
       if (((_a2 = event == null ? void 0 : event.data) == null ? void 0 : _a2.hash) === authParams.hash) {
-        view.removeEventListener("message", onAuthorized);
-        setTimeout(view.close, 2e3);
+        window.removeEventListener("message", onAuthorized);
+        setTimeout(() => view.close(), 2e3);
         resolve((_b = event.data) == null ? void 0 : _b.code);
       }
     }
     onWindowClosed(view, () => {
-      view.removeEventListener("message", onAuthorized);
-      reject("Window was closed");
+      window.removeEventListener("message", onAuthorized);
+      reject(new Error("Window was closed"));
     });
     window.addEventListener("message", onAuthorized);
   });
