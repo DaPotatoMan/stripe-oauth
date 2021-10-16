@@ -20,7 +20,7 @@ export function getOAuthCode(params: IPopupParams): Promise<string> {
       isModal
          ? getPopupParams(...(params.options.size || [900, 600]))
          : undefined
-   )!;
+   ) as Window;
 
    view.focus();
 
@@ -28,10 +28,10 @@ export function getOAuthCode(params: IPopupParams): Promise<string> {
    return new Promise((resolve, reject) => {
       function onAuthorized(event: MessageEvent) {
          if (event?.data?.hash === authParams.hash) {
-            view.removeEventListener('message', onAuthorized);
+            window.removeEventListener('message', onAuthorized);
 
             // Close window
-            setTimeout(view.close, 2000);
+            setTimeout(() => view.close(), 2000);
 
             // Resolve Response Code
             resolve(event.data?.code);
@@ -40,8 +40,8 @@ export function getOAuthCode(params: IPopupParams): Promise<string> {
 
       // Events
       onWindowClosed(view, () => {
-         view.removeEventListener('message', onAuthorized);
-         reject('Window was closed');
+         window.removeEventListener('message', onAuthorized);
+         reject(new Error('Window was closed'));
       });
 
       window.addEventListener('message', onAuthorized);
